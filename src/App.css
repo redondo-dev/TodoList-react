@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  /* border:red solid 3px ; */
+  margin:50px 30px;
+  padding:20px;
+  height: 100vh;
+}
+
+.todolist{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(105, 103, 103);
+ 
+}
+h2{
+  text-shadow: 2px 2px 0px rgb(182, 54, 54) ;
+  text-transform: uppercase;
+  font-size:55px;
+}
+.todolist ul li{
+  width: 180px;
+  margin: 30px;
+  list-style-type:"👉";
+  cursor: pointer;
+}
+
+input{
+  margin:20px;
+  border-radius:9999px ;
+  cursor:pointer;
+  width: 50%;
+  height:25px;
+  text-align: center;
+  margin:0 auto;
+ 
+}
+button{
+  border-radius:9999px;
+  width: 20%;
+  height:30px ;
+  margin:20px auto;
+  background-color: teal;
+  cursor:pointer;
+
+}
+
+button:hover{
+background-color:blue;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.done {
+  text-decoration: line-through;
+}
+.trash{
+  cursor:pointer;
+  color: brown;
+ 
+}
+.completed{
+  cursor:pointer;
+ 
+}
+.message{
+  font-weight: 300;
+  font-size: larger;
+}

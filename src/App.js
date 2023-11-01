@@ -14,12 +14,9 @@ function App() {
   useEffect(() => {
     const savedTodolist = JSON.parse(localStorage.getItem('todolist'));
     if (savedTodolist) {
-    
     setTodolist(savedTodolist);
     }
   }, []);
-
-  
 
   const handelAddTodo =()=>{
   const text = inputRef.current.value;
@@ -37,29 +34,14 @@ const handelItemDone=(index)=>{
   localStorage.setItem('todolist', JSON.stringify(newTodos));
 }
 
-// const handleDeleteItem = (index) => {
-//   const newTodos = [...todolist];
-//   newTodos.splice(index, 1)
-//   setTodolist(newTodos)
 
-//   localStorage.setItem('todolist', JSON.stringify(newTodos));
-//   setMessage(`La tâche "${newTodos[index].text}" a été supprimée avec succès.`);
-
-//   setTimeout(()=>{ 
-//     setMessage('');
-// },
-// 6000);
-// }
 const handleDeleteItem = (index) => {
   const newTodos = [...todolist];
   const deleteItem = newTodos.splice(index, 1)[0]; 
   setTodolist(newTodos);
 
   localStorage.setItem('todolist', JSON.stringify(newTodos));
-
   setMessage(`Cette tâche a été supprimée avec succès "${deleteItem.text}"`);
-
- 
   setTimeout(() => {
     setMessage('');
   }, 3000);
